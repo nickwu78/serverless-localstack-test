@@ -68,7 +68,7 @@ co(function* () {
     StreamArn
   }).promise()
 
-  console.log(`StreamDecription: ${StreamDecription}`)
+  console.log(`StreamDescription: ${StreamDescription}`)
   const { Shards } = StreamDescription
   const iterators = yield Promise.all(Shards.map(({ ShardId }) => dynamodbStreams.getShardIterator({
     ShardIteratorType: 'TRIM_HORIZON',
