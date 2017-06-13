@@ -6,5 +6,11 @@
   "dependencies": {
     "aws-sdk": "^2.58.0",
     "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "serverless": "https://github.com/mvayngrib/serverless#localstack"
+  },
+  "scripts": {
+    "deploy:local": "SLS_DEBUG=* IS_LOCAL=1 sls deploy"
   }
 }
